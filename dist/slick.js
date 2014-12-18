@@ -117,8 +117,8 @@ angular.module('slick', []).directive('slick', [
               useCSS: scope.useCSS !== 'false',
               variableWidth: scope.variableWidth === 'true',
               vertical: scope.vertical === 'true',
-              prevArrow: scope.prevArrow ? $(scope.prevArrow) : void 0,
-              nextArrow: scope.nextArrow ? $(scope.nextArrow) : void 0
+              prevArrow: scope.prevArrow ? scope.prevArrow : void 0,
+              nextArrow: scope.nextArrow ? scope.nextArrow : void 0
             });
             return scope.$watch('currentIndex', function (newVal, oldVal) {
               if (currentIndex != null && newVal != null && newVal !== currentIndex) {
